@@ -1,0 +1,31 @@
+server:
+  port: 7576
+
+spring:
+  profiles:
+    active: sysTest,oauth2
+  application:
+    name: usermanagementsystem
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermanagement?tinyInt1isBit=false
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    validationQuery: SELECT 1
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+info:
+  app:
+    name: User Management System
+    description: User Management System API
+
+logging:
+  level:
+    org:
+      springframework: WARN
+   
+
